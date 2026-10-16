@@ -1,0 +1,20 @@
+# Python virtual environments
+.venv/
+venv/
+env/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE and operating system files
+.vscode/
+.DS_Store
+
+# Temporary Spark files
+spark-warehouse/
+metastore_db/
+derby.log
