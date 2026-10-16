@@ -1,0 +1,8 @@
+confluent-kafka==2.5.3
+pandas
+pyarrow
+pyyaml
+numpy
+pyspark==3.5.1
+datasketch
+mmh3
