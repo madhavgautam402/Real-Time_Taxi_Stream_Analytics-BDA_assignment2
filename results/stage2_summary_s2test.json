@@ -1,0 +1,8 @@
+{
+  "run_id": "s2test",
+  "events_processed": 20398,
+  "reports": 2,
+  "max_lag": 400,
+  "late_included": 381,
+  "late_discarded": 161
+}
