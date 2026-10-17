@@ -1,0 +1,7 @@
+{
+  "run_id": "s3test",
+  "events_processed": 20398,
+  "windows": 3,
+  "late_included": 381,
+  "late_discarded": 161
+}
