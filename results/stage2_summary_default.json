@@ -1,0 +1,8 @@
+{
+  "run_id": "default",
+  "events_processed": 30568,
+  "reports": 15,
+  "max_lag": 2491,
+  "late_included": 279,
+  "late_discarded": 25
+}

@@ -1,0 +1,7 @@
+{
+  "run_id": "default",
+  "events_processed": 30568,
+  "windows": 4,
+  "late_included": 279,
+  "late_discarded": 25
+}

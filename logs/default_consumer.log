@@ -1,0 +1,16 @@
+[final] consuming taxi.metrics + taxi.lsh for run_id=default
+[final] default n=59 eps=1.1 lag=685 p50=0ms p95=0ms bloom_fp=0.0 samp_err=0.0% hll_err=-% dgim_err=10.0% lsh_recall=-
+[final] default n=3557 eps=474.5 lag=1162 p50=0ms p95=0ms bloom_fp=0.0 samp_err=0.0% hll_err=-% dgim_err=3.5165% lsh_recall=-
+[final] default n=6886 eps=652.4 lag=2491 p50=10788ms p95=12270ms bloom_fp=0.0 samp_err=0.0% hll_err=-% dgim_err=2.2069% lsh_recall=-
+[final] default n=10655 eps=721.9 lag=1049 p50=7680ms p95=11437ms bloom_fp=0.0 samp_err=0.0684% hll_err=-% dgim_err=1.0753% lsh_recall=-
+[final] default n=13859 eps=465.9 lag=966 p50=5724ms p95=7216ms bloom_fp=0.0 samp_err=0.307% hll_err=-% dgim_err=4.0% lsh_recall=-
+[final] default n=16527 eps=330.6 lag=819 p50=5229ms p95=7039ms bloom_fp=0.0 samp_err=0.4871% hll_err=0.0271% dgim_err=3.928% lsh_recall=0.6471
+[final] default n=19069 eps=503.0 lag=765 p50=6118ms p95=7795ms bloom_fp=0.0 samp_err=0.7438% hll_err=0.0271% dgim_err=1.9856% lsh_recall=0.6471
+[final] default n=21768 eps=459.4 lag=611 p50=4363ms p95=5600ms bloom_fp=0.0 samp_err=0.6475% hll_err=0.0271% dgim_err=4.9407% lsh_recall=0.6471
+[final] default n=24084 eps=360.0 lag=696 p50=4304ms p95=5343ms bloom_fp=0.0 samp_err=0.8766% hll_err=0.1617% dgim_err=3.2558% lsh_recall=0.7154
+[final] default n=26685 eps=446.5 lag=619 p50=4300ms p95=5467ms bloom_fp=0.0 samp_err=0.4644% hll_err=0.1617% dgim_err=1.7995% lsh_recall=0.7154
+[final] default n=28906 eps=406.2 lag=593 p50=3828ms p95=4666ms bloom_fp=0.0 samp_err=0.8998% hll_err=0.1617% dgim_err=2.809% lsh_recall=0.7154
+[final] default n=30481 eps=287.5 lag=0 p50=4077ms p95=4897ms bloom_fp=0.0 samp_err=0.6854% hll_err=0.1617% dgim_err=2.3121% lsh_recall=0.7154
+[final] default n=30534 eps=8.1 lag=0 p50=3693ms p95=4410ms bloom_fp=0.0 samp_err=0.7139% hll_err=0.1617% dgim_err=0.8696% lsh_recall=0.7154
+[final] default n=30566 eps=5.0 lag=0 p50=3419ms p95=4169ms bloom_fp=0.0 samp_err=0.7199% hll_err=0.1617% dgim_err=0.0% lsh_recall=0.7154
+[final] default n=30568 eps=347.0 lag=0 p50=3579ms p95=4234ms bloom_fp=0.0 samp_err=0.7248% hll_err=2.0784% dgim_err=0.0% lsh_recall=0.7154

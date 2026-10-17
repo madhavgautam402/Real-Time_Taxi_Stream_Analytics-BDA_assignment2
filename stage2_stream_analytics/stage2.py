@@ -99,10 +99,13 @@ def main():
             total += max(0, hi - nxt)
         return total
 
+    late_cnt = {"included": 0, "discarded": 0}
+
     def log_late(ev, sec, ws, we, decision):
-        if st.late_logged >= 30:
+        kind = decision.split()[0]              # "included" or "discarded"
+        if late_cnt[kind] >= 15:
             return
-        st.late_logged += 1
+        late_cnt[kind] += 1
         with open(res / f"late_events_{run_id}.jsonl", "a") as f:
             f.write(json.dumps({
                 "event_id": ev["event_id"], "event_time": ev["event_time"],
