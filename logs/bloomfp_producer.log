@@ -1,0 +1,28 @@
+[producer] 20000 events, rate=400.0/s, key_mode=pickup_zone, run_id=bloomfp
+[producer] sent=2001 actual=400/s
+[producer] sent=4001 actual=400/s
+[producer] sent=6002 actual=400/s
+[producer] sent=7996 actual=399/s
+[producer] sent=9992 actual=399/s
+[producer] sent=12021 actual=400/s
+[producer] sent=14025 actual=400/s
+[producer] sent=16032 actual=400/s
+[producer] sent=18034 actual=400/s
+[producer] sent=20035 actual=400/s
+[producer] DONE {
+  "run_id": "bloomfp",
+  "requested_rate": 400.0,
+  "actual_eps": 400.0,
+  "drain_s": 17.51,
+  "duplicates_sent": 398,
+  "delayed_events": 386,
+  "key_mode": "pickup_zone",
+  "partition_counts": {
+    "1": 5506,
+    "2": 5776,
+    "0": 4414,
+    "3": 4702
+  },
+  "partition_skew_max_fraction": 0.2832,
+  "elapsed_s": 68.26
+}

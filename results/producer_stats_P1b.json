@@ -1,0 +1,14 @@
+{
+  "run_id": "P1b",
+  "requested_rate": 600.0,
+  "actual_eps": 600.0,
+  "drain_s": 17.39,
+  "duplicates_sent": 568,
+  "delayed_events": 605,
+  "key_mode": "pickup_zone",
+  "partition_counts": {
+    "0": 30568
+  },
+  "partition_skew_max_fraction": 1.0,
+  "elapsed_s": 68.07
+}

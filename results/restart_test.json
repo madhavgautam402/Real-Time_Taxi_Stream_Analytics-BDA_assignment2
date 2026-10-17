@@ -1,0 +1,96 @@
+{
+  "before_kill": {
+    "lag": 234,
+    "events_processed_by_stage2": 6966,
+    "committed_batch": 20,
+    "committed_offsets": {
+      "2": 2027,
+      "1": 1923,
+      "3": 1657,
+      "0": 1359
+    }
+  },
+  "at_kill": {
+    "committed_batch": 20,
+    "planned_not_committed_batch": 21
+  },
+  "during_downtime": {
+    "seconds": 30,
+    "lag": 6727,
+    "committed_offsets_unchanged": true,
+    "end_offsets": {
+      "0": 2863,
+      "1": 3818,
+      "2": 3864,
+      "3": 3148
+    }
+  },
+  "after_restart": {
+    "lag_timeline_[seconds_since_restart, lag]": [
+      [
+        0.0,
+        11247
+      ],
+      [
+        3.0,
+        11746
+      ],
+      [
+        6.1,
+        12156
+      ],
+      [
+        9.1,
+        582
+      ],
+      [
+        12.1,
+        276
+      ]
+    ],
+    "seconds_to_catch_up": 12.1
+  },
+  "offsets_and_duplicates": {
+    "planned_not_committed_batch_at_kill": 21,
+    "first_batch_id_after_restart": 21,
+    "batch_ids_logged_twice": [],
+    "events_in_taxi_clean": 30568,
+    "events_processed_over_all_completed_batches": 30568,
+    "events_processed_twice": 0
+  },
+  "state": {
+    "events_processed_counter_drops_[before,after]": [
+      [
+        6966,
+        234
+      ]
+    ],
+    "note": "a drop means the sketches/windows restarted empty after the crash"
+  },
+  "windows_vs_no_failure_run_P3": [
+    {
+      "window_start": "2026-01-01T00:00:00",
+      "events_after_crash_run": 2343,
+      "events_no_failure_P3": 9271,
+      "times_emitted": 1
+    },
+    {
+      "window_start": "2026-01-01T01:00:00",
+      "events_after_crash_run": 10264,
+      "events_no_failure_P3": 10201,
+      "times_emitted": 1
+    },
+    {
+      "window_start": "2026-01-01T02:00:00",
+      "events_after_crash_run": 7807,
+      "events_no_failure_P3": 7807,
+      "times_emitted": 1
+    },
+    {
+      "window_start": "2026-01-01T03:00:00",
+      "events_after_crash_run": 3186,
+      "events_no_failure_P3": 3186,
+      "times_emitted": 1
+    }
+  ]
+}

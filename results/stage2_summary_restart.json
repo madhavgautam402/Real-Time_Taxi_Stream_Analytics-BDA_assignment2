@@ -1,0 +1,8 @@
+{
+  "run_id": "restart",
+  "events_processed": 23602,
+  "reports": 15,
+  "max_lag": 282,
+  "late_included": 147,
+  "late_discarded": 2
+}

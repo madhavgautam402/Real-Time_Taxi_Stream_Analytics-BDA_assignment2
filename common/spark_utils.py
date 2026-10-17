@@ -22,5 +22,4 @@ def get_spark(app_name, slots=4):
             .config("spark.jars.packages", KAFKA_PKG)
             .config("spark.sql.shuffle.partitions", "4")
             .config("spark.ui.enabled", "false")
-            .config("spark.driver.memory", "2g")
-            .getOrCreate())
+            .config("spark.driver.memory", __import__("common.config", fromlist=["x"]).load_config().get("spark_driver_memory", "1g"))            .getOrCreate())

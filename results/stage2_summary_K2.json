@@ -1,0 +1,8 @@
+{
+  "run_id": "K2",
+  "events_processed": 30568,
+  "reports": 12,
+  "max_lag": 1115,
+  "late_included": 342,
+  "late_discarded": 103
+}

@@ -1,0 +1,28 @@
+[producer] 30000 events, rate=600.0/s, key_mode=pickup_zone, run_id=P4
+[producer] sent=3001 actual=600/s
+[producer] sent=6001 actual=600/s
+[producer] sent=9003 actual=600/s
+[producer] sent=12002 actual=600/s
+[producer] sent=15004 actual=600/s
+[producer] sent=18006 actual=600/s
+[producer] sent=21008 actual=600/s
+[producer] sent=24008 actual=600/s
+[producer] sent=27005 actual=600/s
+[producer] sent=30009 actual=600/s
+[producer] DONE {
+  "run_id": "P4",
+  "requested_rate": 600.0,
+  "actual_eps": 600.0,
+  "drain_s": 17.39,
+  "duplicates_sent": 568,
+  "delayed_events": 605,
+  "key_mode": "pickup_zone",
+  "partition_counts": {
+    "1": 8119,
+    "2": 8479,
+    "0": 6693,
+    "3": 7277
+  },
+  "partition_skew_max_fraction": 0.2774,
+  "elapsed_s": 68.07
+}

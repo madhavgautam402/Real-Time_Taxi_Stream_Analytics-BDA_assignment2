@@ -1,0 +1,7 @@
+{
+  "run_id": "P2",
+  "events_processed": 30568,
+  "windows": 4,
+  "late_included": 349,
+  "late_discarded": 103
+}

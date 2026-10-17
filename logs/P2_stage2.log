@@ -1,0 +1,203 @@
+:: loading settings :: url = jar:file:/D:/Semester-5/Big_Data_Analytics/BDA_Assignment2/.venv/Lib/site-packages/pyspark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Ivy Default Cache set to: C:\Users\Madhav Gautam\.ivy2\cache
+The jars for the packages stored in: C:\Users\Madhav Gautam\.ivy2\jars
+org.apache.spark#spark-sql-kafka-0-10_2.12 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-9d34cdbc-56df-4daa-883d-dfe6af5fd77e;1.0
+	confs: [default]
+	found org.apache.spark#spark-sql-kafka-0-10_2.12;3.5.1 in central
+	found org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.5.1 in central
+	found org.apache.kafka#kafka-clients;3.4.1 in central
+	found org.lz4#lz4-java;1.8.0 in central
+	found org.xerial.snappy#snappy-java;1.1.10.3 in central
+	found org.slf4j#slf4j-api;2.0.7 in central
+	found org.apache.hadoop#hadoop-client-runtime;3.3.4 in central
+	found org.apache.hadoop#hadoop-client-api;3.3.4 in central
+	found commons-logging#commons-logging;1.1.3 in central
+	found com.google.code.findbugs#jsr305;3.0.0 in central
+	found org.apache.commons#commons-pool2;2.11.1 in central
+:: resolution report :: resolve 1186ms :: artifacts dl 112ms
+	:: modules in use:
+	com.google.code.findbugs#jsr305;3.0.0 from central in [default]
+	commons-logging#commons-logging;1.1.3 from central in [default]
+	org.apache.commons#commons-pool2;2.11.1 from central in [default]
+	org.apache.hadoop#hadoop-client-api;3.3.4 from central in [default]
+	org.apache.hadoop#hadoop-client-runtime;3.3.4 from central in [default]
+	org.apache.kafka#kafka-clients;3.4.1 from central in [default]
+	org.apache.spark#spark-sql-kafka-0-10_2.12;3.5.1 from central in [default]
+	org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.5.1 from central in [default]
+	org.lz4#lz4-java;1.8.0 from central in [default]
+	org.slf4j#slf4j-api;2.0.7 from central in [default]
+	org.xerial.snappy#snappy-java;1.1.10.3 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   11  |   0   |   0   |   0   ||   11  |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-9d34cdbc-56df-4daa-883d-dfe6af5fd77e
+	confs: [default]
+	0 artifacts copied, 11 already retrieved (0kB/32ms)
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+26/10/17 23:14:47 WARN ResolveWriteToStream: spark.sql.adaptive.enabled is not supported in streaming DataFrames/Datasets and will be disabled.
+[stage2] running: taxi.clean -> taxi.metrics, slots=1, partitions=4
+26/10/17 23:14:50 WARN AdminClientConfig: These configurations '[key.deserializer, value.deserializer, enable.auto.commit, max.poll.records, auto.offset.reset]' were supplied but are not used yet.
+26/10/17 23:14:56 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 7123 milliseconds
+[Stage 0:>                                                          (0 + 0) / 4][Stage 0:>                                                          (0 + 1) / 4][Stage 0:==============>                                            (1 + 1) / 4][Stage 0:=============================>                             (2 + 1) / 4][Stage 0:=============================>                             (2 + 2) / 4][Stage 0:============================================>              (3 + 1) / 4]                                                                                [stage2] REPORT n=225 eps=3.7 lag=2830 p50=0ms p95=0ms bloom fp=0 fn=0 dgim(k=5000) exact=37 est=35 late inc/disc=0/0
+26/10/17 23:15:21 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 10504 milliseconds
+[Stage 1:>                                                          (0 + 1) / 4][Stage 1:==============>                                            (1 + 1) / 4][Stage 1:=============================>                             (2 + 1) / 4][Stage 1:============================================>              (3 + 1) / 4]                                                                                [stage2] REPORT n=5110 eps=726.4 lag=1132 p50=0ms p95=0ms bloom fp=0 fn=0 dgim(k=5000) exact=641 est=628 late inc/disc=0/0
+26/10/17 23:15:27 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 6470 milliseconds
+[Stage 2:==============>                                            (1 + 1) / 4][Stage 2:=============================>                             (2 + 1) / 4]                                                                                [stage2] REPORT n=9130 eps=762.4 lag=1224 p50=0ms p95=0ms bloom fp=0 fn=0 dgim(k=5000) exact=723 est=712 late inc/disc=0/0
+26/10/17 23:15:33 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 5815 milliseconds
+26/10/17 23:15:37 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 3783 milliseconds
+[Stage 4:==============>                                            (1 + 1) / 4][Stage 4:============================================>              (3 + 1) / 4]                                                                                [stage2] WINDOW 2026-01-01T00:00:00 n=9271 | HLL exact=3692 est=3692 err=0.0% | diverse exact=0.4363 event=0.3147 entity=0.5
+[stage2] REPORT n=15269 eps=663.2 lag=4278 p50=14066ms p95=16203ms bloom fp=0 fn=0 dgim(k=5000) exact=670 est=647 late inc/disc=105/8
+26/10/17 23:15:42 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 4811 milliseconds
+[Stage 5:>                                                          (0 + 1) / 4][Stage 5:==============>                                            (1 + 1) / 4][Stage 5:=============================>                             (2 + 1) / 4]                                                                                26/10/17 23:15:46 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 4595 milliseconds
+[Stage 6:==============>                                            (1 + 1) / 4][Stage 6:=============================>                             (2 + 1) / 4]                                                                                [stage2] WINDOW 2026-01-01T01:00:00 n=10201 | HLL exact=4316 est=4313 err=0.0695% | diverse exact=0.4541 event=0.3314 entity=0.5106
+[stage2] REPORT n=23088 eps=849.3 lag=2641 p50=11826ms p95=15522ms bloom fp=0 fn=0 dgim(k=5000) exact=446 est=452 late inc/disc=199/42
+26/10/17 23:15:51 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 4901 milliseconds
+[Stage 7:==============>                                            (1 + 1) / 4][Stage 7:============================================>              (3 + 1) / 4]                                                                                26/10/17 23:15:55 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 3881 milliseconds
+[Stage 8:==============>                                            (1 + 1) / 4][Stage 8:=============================>                             (2 + 1) / 4]                                                                                [stage2] REPORT n=28916 eps=692.3 lag=1523 p50=9617ms p95=11989ms bloom fp=0 fn=0 dgim(k=5000) exact=358 est=369 late inc/disc=252/98
+26/10/17 23:15:59 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 4122 milliseconds
+[Stage 9:==============>                                            (1 + 1) / 4][Stage 9:============================================>              (3 + 1) / 4]                                                                                26/10/17 23:16:03 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 3938 milliseconds
+[Stage 10:==============>                                           (1 + 1) / 4][Stage 10:=============================>                            (2 + 1) / 4]                                                                                [stage2] REPORT n=30491 eps=214.6 lag=32 p50=9645ms p95=10818ms bloom fp=0 fn=0 dgim(k=5000) exact=343 est=338 late inc/disc=314/103
+26/10/17 23:16:07 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 3407 milliseconds
+[Stage 11:==============>                                           (1 + 1) / 4][Stage 11:===========================================>              (3 + 1) / 4]                                                                                26/10/17 23:16:11 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 3858 milliseconds
+[Stage 12:==============>                                           (1 + 1) / 4][Stage 12:===========================================>              (3 + 1) / 4]                                                                                [stage2] REPORT n=30547 eps=7.8 lag=19 p50=8876ms p95=10260ms bloom fp=0 fn=0 dgim(k=5000) exact=341 est=342 late inc/disc=343/103
+26/10/17 23:16:14 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 3233 milliseconds
+[Stage 13:==============>                                           (1 + 1) / 4][Stage 13:=============================>                            (2 + 1) / 4][Stage 13:===========================================>              (3 + 1) / 4]                                                                                26/10/17 23:16:18 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 4329 milliseconds
+[Stage 14:>                                                         (0 + 1) / 2]                                                                                [stage2] REPORT n=30568 eps=3.0 lag=0 p50=9231ms p95=11028ms bloom fp=0 fn=0 dgim(k=5000) exact=340 est=343 late inc/disc=349/103
+26/10/17 23:16:21 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 2603 milliseconds
+[stage2] idle timeout reached, stopping
+[stage2] WINDOW 2026-01-01T02:00:00 n=7807 | HLL exact=3771 est=3848 err=2.0419% | diverse exact=0.4476 event=0.2968 entity=0.5333
+[stage2] WINDOW 2026-01-01T03:00:00 n=3186 | HLL exact=2117 est=2161 err=2.0784% | diverse exact=0.4034 event=0.1803 entity=0.4865
+[stage2] REPORT n=30568 eps=450.4 lag=0 p50=0ms p95=0ms bloom fp=0 fn=0 dgim(k=5000) exact=340 est=343 late inc/disc=349/103
+26/10/17 23:16:51 WARN SparkEnv: Exception while deleting Spark temp dir: D:\SparkTemp\spark-e66b031f-f6d8-4cc0-b75b-3ecaf1658572\userFiles-b517f7f3-4af6-4685-ac1f-b4c5a646726e
+java.io.IOException: Failed to delete: D:\SparkTemp\spark-e66b031f-f6d8-4cc0-b75b-3ecaf1658572\userFiles-b517f7f3-4af6-4685-ac1f-b4c5a646726e\org.xerial.snappy_snappy-java-1.1.10.3.jar
+	at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingJavaIO(JavaUtils.java:146)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:117)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingJavaIO(JavaUtils.java:129)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:117)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:90)
+	at org.apache.spark.util.SparkFileUtils.deleteRecursively(SparkFileUtils.scala:121)
+	at org.apache.spark.util.SparkFileUtils.deleteRecursively$(SparkFileUtils.scala:120)
+	at org.apache.spark.util.Utils$.deleteRecursively(Utils.scala:1126)
+	at org.apache.spark.SparkEnv.stop(SparkEnv.scala:108)
+	at org.apache.spark.SparkContext.$anonfun$stop$25(SparkContext.scala:2310)
+	at org.apache.spark.util.Utils$.tryLogNonFatalError(Utils.scala:1375)
+	at org.apache.spark.SparkContext.stop(SparkContext.scala:2310)
+	at org.apache.spark.SparkContext.stop(SparkContext.scala:2216)
+	at org.apache.spark.api.java.JavaSparkContext.stop(JavaSparkContext.scala:550)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+26/10/17 23:16:51 ERROR ShutdownHookManager: Exception while deleting Spark temp dir: D:\SparkTemp\spark-e66b031f-f6d8-4cc0-b75b-3ecaf1658572\userFiles-b517f7f3-4af6-4685-ac1f-b4c5a646726e
+java.io.IOException: Failed to delete: D:\SparkTemp\spark-e66b031f-f6d8-4cc0-b75b-3ecaf1658572\userFiles-b517f7f3-4af6-4685-ac1f-b4c5a646726e\org.xerial.snappy_snappy-java-1.1.10.3.jar
+	at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingJavaIO(JavaUtils.java:146)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:117)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingJavaIO(JavaUtils.java:129)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:117)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:90)
+	at org.apache.spark.util.SparkFileUtils.deleteRecursively(SparkFileUtils.scala:121)
+	at org.apache.spark.util.SparkFileUtils.deleteRecursively$(SparkFileUtils.scala:120)
+	at org.apache.spark.util.Utils$.deleteRecursively(Utils.scala:1126)
+	at org.apache.spark.util.ShutdownHookManager$.$anonfun$new$4(ShutdownHookManager.scala:65)
+	at org.apache.spark.util.ShutdownHookManager$.$anonfun$new$4$adapted(ShutdownHookManager.scala:62)
+	at scala.collection.IndexedSeqOptimized.foreach(IndexedSeqOptimized.scala:36)
+	at scala.collection.IndexedSeqOptimized.foreach$(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:198)
+	at org.apache.spark.util.ShutdownHookManager$.$anonfun$new$2(ShutdownHookManager.scala:62)
+	at org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:214)
+	at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$2(ShutdownHookManager.scala:188)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1928)
+	at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$1(ShutdownHookManager.scala:188)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.util.Try$.apply(Try.scala:213)
+	at org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:178)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+26/10/17 23:16:51 ERROR ShutdownHookManager: Exception while deleting Spark temp dir: D:\SparkTemp\spark-e66b031f-f6d8-4cc0-b75b-3ecaf1658572
+java.io.IOException: Failed to delete: D:\SparkTemp\spark-e66b031f-f6d8-4cc0-b75b-3ecaf1658572\userFiles-b517f7f3-4af6-4685-ac1f-b4c5a646726e\org.xerial.snappy_snappy-java-1.1.10.3.jar
+	at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingJavaIO(JavaUtils.java:146)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:117)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingJavaIO(JavaUtils.java:129)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:117)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingJavaIO(JavaUtils.java:129)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:117)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:90)
+	at org.apache.spark.util.SparkFileUtils.deleteRecursively(SparkFileUtils.scala:121)
+	at org.apache.spark.util.SparkFileUtils.deleteRecursively$(SparkFileUtils.scala:120)
+	at org.apache.spark.util.Utils$.deleteRecursively(Utils.scala:1126)
+	at org.apache.spark.util.ShutdownHookManager$.$anonfun$new$4(ShutdownHookManager.scala:65)
+	at org.apache.spark.util.ShutdownHookManager$.$anonfun$new$4$adapted(ShutdownHookManager.scala:62)
+	at scala.collection.IndexedSeqOptimized.foreach(IndexedSeqOptimized.scala:36)
+	at scala.collection.IndexedSeqOptimized.foreach$(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:198)
+	at org.apache.spark.util.ShutdownHookManager$.$anonfun$new$2(ShutdownHookManager.scala:62)
+	at org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:214)
+	at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$2(ShutdownHookManager.scala:188)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1928)
+	at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$1(ShutdownHookManager.scala:188)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.util.Try$.apply(Try.scala:213)
+	at org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:178)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+26/10/17 23:16:51 ERROR ShutdownHookManager: Exception while deleting Spark temp dir: D:\SparkTemp\spark-e66b031f-f6d8-4cc0-b75b-3ecaf1658572\pyspark-40337d06-281e-4af6-ae51-33dc48507a6d
+java.nio.file.NoSuchFileException: D:\SparkTemp\spark-e66b031f-f6d8-4cc0-b75b-3ecaf1658572\pyspark-40337d06-281e-4af6-ae51-33dc48507a6d
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileAttributeViews$Basic.readAttributes(WindowsFileAttributeViews.java:53)
+	at java.base/sun.nio.fs.WindowsFileAttributeViews$Basic.readAttributes(WindowsFileAttributeViews.java:38)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.readAttributes(WindowsFileSystemProvider.java:199)
+	at java.base/java.nio.file.Files.readAttributes(Files.java:1851)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingJavaIO(JavaUtils.java:124)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:117)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:90)
+	at org.apache.spark.util.SparkFileUtils.deleteRecursively(SparkFileUtils.scala:121)
+	at org.apache.spark.util.SparkFileUtils.deleteRecursively$(SparkFileUtils.scala:120)
+	at org.apache.spark.util.Utils$.deleteRecursively(Utils.scala:1126)
+	at org.apache.spark.util.ShutdownHookManager$.$anonfun$new$4(ShutdownHookManager.scala:65)
+	at org.apache.spark.util.ShutdownHookManager$.$anonfun$new$4$adapted(ShutdownHookManager.scala:62)
+	at scala.collection.IndexedSeqOptimized.foreach(IndexedSeqOptimized.scala:36)
+	at scala.collection.IndexedSeqOptimized.foreach$(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:198)
+	at org.apache.spark.util.ShutdownHookManager$.$anonfun$new$2(ShutdownHookManager.scala:62)
+	at org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:214)
+	at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$2(ShutdownHookManager.scala:188)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1928)
+	at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$1(ShutdownHookManager.scala:188)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.util.Try$.apply(Try.scala:213)
+	at org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:178)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+SUCCESS: The process with PID 10964 (child process of PID 15372) has been terminated.
+SUCCESS: The process with PID 15372 (child process of PID 29440) has been terminated.
+SUCCESS: The process with PID 29440 (child process of PID 7048) has been terminated.

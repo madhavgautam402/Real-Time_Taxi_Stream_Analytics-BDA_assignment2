@@ -1,0 +1,8 @@
+{
+  "run_id": "e2e",
+  "events_processed": 20398,
+  "reports": 7,
+  "max_lag": 2916,
+  "late_included": 339,
+  "late_discarded": 85
+}

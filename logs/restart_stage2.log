@@ -1,0 +1,71 @@
+:: loading settings :: url = jar:file:/D:/Semester-5/Big_Data_Analytics/BDA_Assignment2/.venv/Lib/site-packages/pyspark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Ivy Default Cache set to: C:\Users\Madhav Gautam\.ivy2\cache
+The jars for the packages stored in: C:\Users\Madhav Gautam\.ivy2\jars
+org.apache.spark#spark-sql-kafka-0-10_2.12 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-097de59e-0d9e-4c1f-8fdb-2dd83a65a959;1.0
+	confs: [default]
+	found org.apache.spark#spark-sql-kafka-0-10_2.12;3.5.1 in central
+	found org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.5.1 in central
+	found org.apache.kafka#kafka-clients;3.4.1 in central
+	found org.lz4#lz4-java;1.8.0 in central
+	found org.xerial.snappy#snappy-java;1.1.10.3 in central
+	found org.slf4j#slf4j-api;2.0.7 in central
+	found org.apache.hadoop#hadoop-client-runtime;3.3.4 in central
+	found org.apache.hadoop#hadoop-client-api;3.3.4 in central
+	found commons-logging#commons-logging;1.1.3 in central
+	found com.google.code.findbugs#jsr305;3.0.0 in central
+	found org.apache.commons#commons-pool2;2.11.1 in central
+:: resolution report :: resolve 914ms :: artifacts dl 58ms
+	:: modules in use:
+	com.google.code.findbugs#jsr305;3.0.0 from central in [default]
+	commons-logging#commons-logging;1.1.3 from central in [default]
+	org.apache.commons#commons-pool2;2.11.1 from central in [default]
+	org.apache.hadoop#hadoop-client-api;3.3.4 from central in [default]
+	org.apache.hadoop#hadoop-client-runtime;3.3.4 from central in [default]
+	org.apache.kafka#kafka-clients;3.4.1 from central in [default]
+	org.apache.spark#spark-sql-kafka-0-10_2.12;3.5.1 from central in [default]
+	org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.5.1 from central in [default]
+	org.lz4#lz4-java;1.8.0 from central in [default]
+	org.slf4j#slf4j-api;2.0.7 from central in [default]
+	org.xerial.snappy#snappy-java;1.1.10.3 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   11  |   0   |   0   |   0   ||   11  |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-097de59e-0d9e-4c1f-8fdb-2dd83a65a959
+	confs: [default]
+	0 artifacts copied, 11 already retrieved (0kB/35ms)
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+26/10/18 00:03:09 WARN ResolveWriteToStream: spark.sql.adaptive.enabled is not supported in streaming DataFrames/Datasets and will be disabled.
+[stage2] running: taxi.clean -> taxi.metrics, slots=4, partitions=4
+26/10/18 00:03:11 WARN AdminClientConfig: These configurations '[key.deserializer, value.deserializer, enable.auto.commit, max.poll.records, auto.offset.reset]' were supplied but are not used yet.
+26/10/18 00:03:15 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 5290 milliseconds
+[Stage 0:>                                                          (0 + 4) / 4]                                                                                [stage2] REPORT n=54 eps=1.7 lag=840 p50=0ms p95=0ms bloom fp=0 fn=0 dgim(k=5000) exact=9 est=8 late inc/disc=0/0
+26/10/18 00:03:23 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 4699 milliseconds
+26/10/18 00:03:25 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 2256 milliseconds
+26/10/18 00:03:27 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1874 milliseconds
+[stage2] REPORT n=2277 eps=355.2 lag=389 p50=4141ms p95=5357ms bloom fp=0 fn=0 dgim(k=5000) exact=271 est=255 late inc/disc=0/0
+26/10/18 00:03:29 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1921 milliseconds
+26/10/18 00:03:31 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1591 milliseconds
+26/10/18 00:03:32 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1489 milliseconds
+26/10/18 00:03:34 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1406 milliseconds
+[stage2] REPORT n=3658 eps=229.3 lag=274 p50=3408ms p95=4503ms bloom fp=0 fn=0 dgim(k=5000) exact=470 est=454 late inc/disc=0/0
+26/10/18 00:03:35 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1449 milliseconds
+26/10/18 00:03:37 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1614 milliseconds
+26/10/18 00:03:38 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1430 milliseconds
+26/10/18 00:03:39 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1261 milliseconds
+[stage2] REPORT n=4843 eps=213.1 lag=246 p50=3081ms p95=3878ms bloom fp=0 fn=0 dgim(k=5000) exact=628 est=596 late inc/disc=0/0
+26/10/18 00:03:41 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1227 milliseconds
+26/10/18 00:03:42 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1500 milliseconds
+26/10/18 00:03:44 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1310 milliseconds
+26/10/18 00:03:45 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1344 milliseconds
+[stage2] REPORT n=5893 eps=192.2 lag=278 p50=2819ms p95=3414ms bloom fp=0 fn=0 dgim(k=5000) exact=674 est=676 late inc/disc=0/0
+26/10/18 00:03:46 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1380 milliseconds
+26/10/18 00:03:48 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1486 milliseconds
+26/10/18 00:03:49 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1145 milliseconds
+26/10/18 00:03:50 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1186 milliseconds
+[stage2] REPORT n=6966 eps=206.4 lag=234 p50=2743ms p95=3471ms bloom fp=0 fn=0 dgim(k=5000) exact=726 est=721 late inc/disc=0/0
+26/10/18 00:03:51 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1313 milliseconds

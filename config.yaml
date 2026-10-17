@@ -1,7 +1,7 @@
 run_id: default
 bootstrap: "localhost:9092"
 parquet_path: data/yellow_tripdata_2026-01.parquet
-max_events: 200000          # size of the taxi segment to replay
+max_events: 30000          # size of the taxi segment to replay
 key_mode: pickup_zone       # pickup_zone | none  (none = round-robin experiment K2)
 
 topics:
@@ -11,7 +11,7 @@ topics:
   lsh: taxi.lsh
 
 partitions: 4
-producer_rate: 1000
+producer_rate: 400
 duplicate_rate: 0.02
 delayed_event_rate: 0.02
 max_delay_seconds: 20
@@ -38,3 +38,5 @@ dgim_r: 2                       # try 4 or 8 to tighten DGIM error
 lsh_min_trips: 20
 lsh_extra_configs: [[25, 4], [10, 10]]   # extra band x rows settings (each must multiply to lsh_num_hashes)
 stage3_max_offsets_per_trigger: 20000
+spark_driver_memory: 1g     # per Spark app; 3 apps run together
+dgim_r: 8

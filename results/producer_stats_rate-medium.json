@@ -1,0 +1,17 @@
+{
+  "run_id": "rate-medium",
+  "requested_rate": 400.0,
+  "actual_eps": 400.0,
+  "drain_s": 16.96,
+  "duplicates_sent": 568,
+  "delayed_events": 605,
+  "key_mode": "pickup_zone",
+  "partition_counts": {
+    "2": 8479,
+    "3": 7277,
+    "0": 6693,
+    "1": 8119
+  },
+  "partition_skew_max_fraction": 0.2774,
+  "elapsed_s": 93.11
+}

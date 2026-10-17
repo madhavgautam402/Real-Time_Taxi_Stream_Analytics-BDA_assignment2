@@ -1,0 +1,22 @@
+[final] consuming taxi.metrics + taxi.lsh for run_id=restart
+[final] restart n=54 eps=1.7 lag=840 p50=0ms p95=0ms bloom_fp=0.0 samp_err=0.0% hll_err=-% dgim_err=11.1111% lsh_recall=-
+[final] restart n=2277 eps=355.2 lag=389 p50=4141ms p95=5357ms bloom_fp=0.0 samp_err=0.0% hll_err=-% dgim_err=5.9041% lsh_recall=-
+[final] restart n=3658 eps=229.3 lag=274 p50=3408ms p95=4503ms bloom_fp=0.0 samp_err=0.0% hll_err=-% dgim_err=3.4043% lsh_recall=-
+[final] restart n=4843 eps=213.1 lag=246 p50=3081ms p95=3878ms bloom_fp=0.0 samp_err=0.0% hll_err=-% dgim_err=5.0955% lsh_recall=-
+[final] restart n=5893 eps=192.2 lag=278 p50=2819ms p95=3414ms bloom_fp=0.0 samp_err=0.0% hll_err=-% dgim_err=0.2967% lsh_recall=-
+[final] restart n=6966 eps=206.4 lag=234 p50=2743ms p95=3471ms bloom_fp=0.0 samp_err=0.0% hll_err=-% dgim_err=0.6887% lsh_recall=-
+[final] restart n=234 eps=8.9 lag=11812 p50=0ms p95=0ms bloom_fp=0.0 samp_err=0.0% hll_err=-% dgim_err=4.5455% lsh_recall=-
+[final] restart n=13259 eps=2095.0 lag=276 p50=3998ms p95=5109ms bloom_fp=0.0 samp_err=0.3662% hll_err=1.8519% dgim_err=2.583% lsh_recall=-
+[final] restart n=14290 eps=186.7 lag=240 p50=2906ms p95=3661ms bloom_fp=0.0 samp_err=0.2551% hll_err=1.8519% dgim_err=0.9597% lsh_recall=-
+[final] restart n=15285 eps=196.9 lag=242 p50=3373ms p95=4324ms bloom_fp=0.0 samp_err=0.1981% hll_err=1.8519% dgim_err=0.0% lsh_recall=-
+[final] restart n=16457 eps=228.7 lag=241 p50=2586ms p95=4051ms bloom_fp=0.0 samp_err=0.2087% hll_err=0.1615% dgim_err=1.1468% lsh_recall=-
+[final] restart n=17494 eps=201.8 lag=223 p50=2656ms p95=3331ms bloom_fp=0.0 samp_err=0.1842% hll_err=0.1615% dgim_err=3.1401% lsh_recall=-
+[final] restart n=18587 eps=198.4 lag=245 p50=2336ms p95=2827ms bloom_fp=0.0 samp_err=0.1856% hll_err=0.1615% dgim_err=1.4925% lsh_recall=-
+[final] restart n=19781 eps=201.0 lag=235 p50=2531ms p95=3121ms bloom_fp=0.0 samp_err=0.1311% hll_err=0.1615% dgim_err=1.2788% lsh_recall=-
+[final] restart n=20888 eps=195.0 lag=255 p50=2350ms p95=2854ms bloom_fp=0.0 samp_err=0.0891% hll_err=0.1615% dgim_err=1.0499% lsh_recall=-
+[final] restart n=22113 eps=203.5 lag=221 p50=2558ms p95=3197ms bloom_fp=0.0 samp_err=0.0302% hll_err=0.1615% dgim_err=3.0986% lsh_recall=-
+[final] restart n=23063 eps=185.0 lag=282 p50=2662ms p95=3217ms bloom_fp=0.0 samp_err=0.1561% hll_err=0.1615% dgim_err=1.676% lsh_recall=-
+[final] restart n=23575 eps=90.9 lag=0 p50=3213ms p95=3773ms bloom_fp=0.0 samp_err=0.1518% hll_err=0.1615% dgim_err=2.8818% lsh_recall=-
+[final] restart n=23590 eps=2.6 lag=0 p50=2918ms p95=3548ms bloom_fp=0.0 samp_err=0.1176% hll_err=0.1615% dgim_err=4.0816% lsh_recall=-
+[final] restart n=23599 eps=1.4 lag=2 p50=3233ms p95=3953ms bloom_fp=0.0 samp_err=0.1405% hll_err=0.1615% dgim_err=4.6784% lsh_recall=-
+[final] restart n=23602 eps=298.2 lag=0 p50=4074ms p95=4260ms bloom_fp=0.0 samp_err=0.1266% hll_err=2.0784% dgim_err=4.6784% lsh_recall=-

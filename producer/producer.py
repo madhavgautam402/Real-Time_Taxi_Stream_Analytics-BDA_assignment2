@@ -24,8 +24,22 @@ def pick(df, key):
         return pd.Series(0, index=df.index)
     raise KeyError(f"No column for '{key}' in {list(df.columns)}")
 
-def load_events(cfg):
-    df = pd.read_parquet(resolve(cfg["parquet_path"]))
+def build_segment(cfg):
+    """Cleaned, sorted taxi segment. Cached in data/ so the big parquet is read only once."""
+    import pyarrow.parquet as pq
+    path = resolve(cfg["parquet_path"])
+    seg = resolve(f"data/segment_{path.stem}_{cfg['max_events']}.parquet")
+    if seg.exists():
+        return pd.read_parquet(seg)
+
+    names = pq.ParquetFile(path).schema.names
+    cols = []
+    for key, cands in COLS.items():                 # read only the columns we need
+        for n in cands:
+            if n in names:
+                cols.append(n)
+                break
+    df = pd.read_parquet(path, columns=cols)
     d = pd.DataFrame({
         "pickup_dt":  pd.to_datetime(pick(df, "pickup"), errors="coerce"),
         "dropoff_dt": pd.to_datetime(pick(df, "dropoff"), errors="coerce"),
@@ -36,11 +50,17 @@ def load_events(cfg):
         "pax":  pd.to_numeric(pick(df, "pax"), errors="coerce").fillna(0),
         "pay":  pd.to_numeric(pick(df, "pay"), errors="coerce").fillna(0),
     })
+    del df
     d = d.dropna(subset=["pickup_dt", "dropoff_dt", "pz", "dz", "dist", "fare"])
     d = d[(d.dropoff_dt > d.pickup_dt) & (d.fare >= 0) & (d.dist >= 0)]
-    ym = d.pickup_dt.dt.to_period("M")           # keep the dominant month only
+    ym = d.pickup_dt.dt.to_period("M")              # keep the dominant month only
     d = d[ym == ym.mode()[0]]
     d = d.sort_values("pickup_dt", kind="stable").reset_index(drop=True).iloc[: cfg["max_events"]]
+    d.to_parquet(seg)
+    return d
+
+def load_events(cfg):
+    d = build_segment(cfg)
     month = d.pickup_dt.iloc[0].strftime("%Y-%m")
     fmt = "%Y-%m-%dT%H:%M:%S"
     events = []
@@ -57,7 +77,6 @@ def load_events(cfg):
             "payment_type": int(r.pay),
         })
     return events
-
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--rate", type=float)
@@ -65,6 +84,7 @@ def main():
     ap.add_argument("--key-mode", choices=["pickup_zone", "none"])
     ap.add_argument("--run-id")
     ap.add_argument("--seed", type=int, default=42)
+    ap.add_argument("--prepare-only", action="store_true", help="build the cached segment and exit")    
     a = ap.parse_args()
 
     cfg = load_config()
@@ -77,6 +97,9 @@ def main():
     rng = random.Random(a.seed)
 
     events = load_events(cfg)
+    if a.prepare_only:
+        print(f"[producer] segment ready: {len(events)} events")
+        return
     print(f"[producer] {len(events)} events, rate={rate}/s, key_mode={key_mode}, run_id={run_id}")
 
     part_counts = {}

@@ -1,0 +1,8 @@
+{
+  "run_id": "P1",
+  "events_processed": 30568,
+  "reports": 11,
+  "max_lag": 2187,
+  "late_included": 341,
+  "late_discarded": 104
+}

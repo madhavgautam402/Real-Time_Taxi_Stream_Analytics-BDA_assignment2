@@ -1,0 +1,17 @@
+[final] consuming taxi.metrics + taxi.lsh for run_id=rate-medium
+[final] rate-medium n=671 eps=12.1 lag=1993 p50=0ms p95=0ms bloom_fp=0.0 samp_err=0.0% hll_err=-% dgim_err=5.6338% lsh_recall=-
+[final] rate-medium n=4782 eps=530.6 lag=1717 p50=0ms p95=0ms bloom_fp=0.0 samp_err=0.0% hll_err=-% dgim_err=5.1696% lsh_recall=-
+[final] rate-medium n=7920 eps=585.1 lag=1152 p50=7543ms p95=9777ms bloom_fp=0.0 samp_err=0.0% hll_err=-% dgim_err=1.3643% lsh_recall=-
+[final] rate-medium n=10264 eps=468.4 lag=718 p50=6247ms p95=7780ms bloom_fp=0.0 samp_err=0.0022% hll_err=-% dgim_err=0.4038% lsh_recall=-
+[final] rate-medium n=13245 eps=452.8 lag=832 p50=4870ms p95=6316ms bloom_fp=0.0 samp_err=0.0415% hll_err=-% dgim_err=3.5971% lsh_recall=-
+[final] rate-medium n=16032 eps=437.6 lag=705 p50=4675ms p95=5922ms bloom_fp=0.0 samp_err=0.7796% hll_err=0.0271% dgim_err=4.5161% lsh_recall=0.6471
+[final] rate-medium n=18428 eps=421.2 lag=685 p50=4074ms p95=5061ms bloom_fp=0.0 samp_err=1.1846% hll_err=0.0271% dgim_err=3.4173% lsh_recall=0.6471
+[final] rate-medium n=20396 eps=359.0 lag=0 p50=3669ms p95=4661ms bloom_fp=0.0 samp_err=0.7935% hll_err=0.0271% dgim_err=3.5382% lsh_recall=0.6471
+[final] rate-medium n=22861 eps=420.0 lag=776 p50=4328ms p95=5505ms bloom_fp=0.0 samp_err=0.9127% hll_err=0.0271% dgim_err=5.8952% lsh_recall=0.6471
+[final] rate-medium n=25555 eps=420.3 lag=634 p50=3427ms p95=4219ms bloom_fp=0.0 samp_err=0.6841% hll_err=0.1617% dgim_err=2.4691% lsh_recall=0.7154
+[final] rate-medium n=27586 eps=391.2 lag=703 p50=3658ms p95=4420ms bloom_fp=0.0 samp_err=0.5829% hll_err=0.1617% dgim_err=1.8617% lsh_recall=0.7154
+[final] rate-medium n=29623 eps=398.3 lag=584 p50=3497ms p95=4278ms bloom_fp=0.0 samp_err=0.6234% hll_err=0.1617% dgim_err=1.9284% lsh_recall=0.7154
+[final] rate-medium n=30500 eps=171.0 lag=0 p50=3981ms p95=4661ms bloom_fp=0.0 samp_err=0.5762% hll_err=0.1617% dgim_err=1.1628% lsh_recall=0.7154
+[final] rate-medium n=30543 eps=6.9 lag=0 p50=3498ms p95=4308ms bloom_fp=0.0 samp_err=0.5493% hll_err=0.1617% dgim_err=0.8696% lsh_recall=0.7154
+[final] rate-medium n=30565 eps=4.1 lag=1 p50=3739ms p95=4278ms bloom_fp=0.0 samp_err=0.5342% hll_err=0.1617% dgim_err=0.0% lsh_recall=0.7154
+[final] rate-medium n=30568 eps=345.2 lag=0 p50=4035ms p95=4111ms bloom_fp=0.0 samp_err=0.5473% hll_err=2.0784% dgim_err=0.0% lsh_recall=0.4286

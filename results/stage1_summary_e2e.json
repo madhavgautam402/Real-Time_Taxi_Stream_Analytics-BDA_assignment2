@@ -1,0 +1,14 @@
+{
+  "run_id": "e2e",
+  "events_in": 20398,
+  "accepted": 20398,
+  "rejected": 0,
+  "ids_inserted": 20000,
+  "bloom_bits": 1917012,
+  "bloom_hashes": 7,
+  "true_duplicates_seen": 398,
+  "false_positives": 0,
+  "false_negatives": 0,
+  "fp_rate": 0.0,
+  "fn_rate": 0.0
+}

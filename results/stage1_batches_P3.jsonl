@@ -1,0 +1,10 @@
+{"batch_id": 1, "rows": 102, "accepted": 102, "batch_s": 4.279, "stage1_eps": 23.8, "raw_lag": 3236, "ts_ms": 1792259289350}
+{"batch_id": 2, "rows": 4060, "accepted": 4060, "batch_s": 8.171, "stage1_eps": 496.9, "raw_lag": 4543, "ts_ms": 1792259300055}
+{"batch_id": 3, "rows": 5628, "accepted": 5628, "batch_s": 7.929, "stage1_eps": 709.8, "raw_lag": 5079, "ts_ms": 1792259312687}
+{"batch_id": 4, "rows": 6221, "accepted": 6221, "batch_s": 5.005, "stage1_eps": 1243.0, "raw_lag": 6394, "ts_ms": 1792259320750}
+{"batch_id": 5, "rows": 7065, "accepted": 7065, "batch_s": 5.569, "stage1_eps": 1268.7, "raw_lag": 4338, "ts_ms": 1792259329122}
+{"batch_id": 6, "rows": 5086, "accepted": 5086, "batch_s": 5.497, "stage1_eps": 925.3, "raw_lag": 2308, "ts_ms": 1792259337351}
+{"batch_id": 7, "rows": 2322, "accepted": 2322, "batch_s": 2.103, "stage1_eps": 1104.2, "raw_lag": 34, "ts_ms": 1792259341902}
+{"batch_id": 8, "rows": 50, "accepted": 50, "batch_s": 0.823, "stage1_eps": 60.8, "raw_lag": 18, "ts_ms": 1792259347015}
+{"batch_id": 9, "rows": 28, "accepted": 28, "batch_s": 0.869, "stage1_eps": 32.2, "raw_lag": 6, "ts_ms": 1792259352170}
+{"batch_id": 10, "rows": 6, "accepted": 6, "batch_s": 0.691, "stage1_eps": 8.7, "raw_lag": 0, "ts_ms": 1792259355075}

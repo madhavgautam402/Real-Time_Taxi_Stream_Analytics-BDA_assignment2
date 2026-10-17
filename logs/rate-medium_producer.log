@@ -1,0 +1,33 @@
+[producer] 30000 events, rate=400.0/s, key_mode=pickup_zone, run_id=rate-medium
+[producer] sent=2001 actual=400/s
+[producer] sent=4002 actual=400/s
+[producer] sent=6002 actual=400/s
+[producer] sent=8002 actual=400/s
+[producer] sent=10003 actual=400/s
+[producer] sent=12003 actual=400/s
+[producer] sent=14006 actual=400/s
+[producer] sent=16007 actual=400/s
+[producer] sent=18017 actual=400/s
+[producer] sent=20018 actual=400/s
+[producer] sent=22018 actual=400/s
+[producer] sent=24018 actual=400/s
+[producer] sent=26019 actual=400/s
+[producer] sent=28019 actual=400/s
+[producer] sent=30019 actual=400/s
+[producer] DONE {
+  "run_id": "rate-medium",
+  "requested_rate": 400.0,
+  "actual_eps": 400.0,
+  "drain_s": 16.96,
+  "duplicates_sent": 568,
+  "delayed_events": 605,
+  "key_mode": "pickup_zone",
+  "partition_counts": {
+    "2": 8479,
+    "3": 7277,
+    "0": 6693,
+    "1": 8119
+  },
+  "partition_skew_max_fraction": 0.2774,
+  "elapsed_s": 93.11
+}

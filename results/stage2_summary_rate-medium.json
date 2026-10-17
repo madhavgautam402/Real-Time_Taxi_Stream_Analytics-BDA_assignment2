@@ -1,0 +1,8 @@
+{
+  "run_id": "rate-medium",
+  "events_processed": 30568,
+  "reports": 16,
+  "max_lag": 1152,
+  "late_included": 280,
+  "late_discarded": 25
+}

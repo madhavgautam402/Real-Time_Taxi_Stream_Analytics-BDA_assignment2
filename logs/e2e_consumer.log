@@ -1,0 +1,8 @@
+[final] consuming taxi.metrics + taxi.lsh for run_id=e2e
+[final] e2e n=877 eps=17.4 lag=1973 p50=8814ms p95=9208ms bloom_fp=0.0 samp_err=0.0% hll_err=-% dgim_err=16.8421% lsh_recall=-
+[final] e2e n=7988 eps=1162.2 lag=35 p50=9435ms p95=11230ms bloom_fp=0.0 samp_err=0.0% hll_err=-% dgim_err=14.69% lsh_recall=-
+[final] e2e n=11685 eps=685.9 lag=2916 p50=9430ms p95=10404ms bloom_fp=0.0 samp_err=0.21% hll_err=-% dgim_err=18.7929% lsh_recall=-
+[final] e2e n=18817 eps=996.7 lag=1367 p50=9791ms p95=10908ms bloom_fp=0.0 samp_err=0.2611% hll_err=0.2171% dgim_err=0.9124% lsh_recall=0.6402
+[final] e2e n=20342 eps=269.8 lag=0 p50=10164ms p95=10828ms bloom_fp=0.0 samp_err=0.0979% hll_err=0.2171% dgim_err=15.514% lsh_recall=0.6402
+[final] e2e n=20391 eps=9.3 lag=0 p50=4114ms p95=4821ms bloom_fp=0.0 samp_err=0.1279% hll_err=0.2171% dgim_err=14.5794% lsh_recall=0.6402
+[final] e2e n=20398 eps=0.1 lag=0 p50=3753ms p95=4301ms bloom_fp=0.0 samp_err=0.1189% hll_err=0.1443% dgim_err=14.4195% lsh_recall=0.6402

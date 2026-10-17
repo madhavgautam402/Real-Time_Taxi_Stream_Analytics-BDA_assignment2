@@ -1,0 +1,14 @@
+{
+  "run_id": "bloomfp",
+  "events_in": 20398,
+  "accepted": 20398,
+  "rejected": 0,
+  "ids_inserted": 20000,
+  "bloom_bits": 100000,
+  "bloom_hashes": 7,
+  "true_duplicates_seen": 398,
+  "false_positives": 614,
+  "false_negatives": 0,
+  "fp_rate": 0.0307,
+  "fn_rate": 0.0
+}

@@ -1,0 +1,7 @@
+{
+  "run_id": "rate-low",
+  "events_processed": 30568,
+  "windows": 4,
+  "late_included": 106,
+  "late_discarded": 0
+}

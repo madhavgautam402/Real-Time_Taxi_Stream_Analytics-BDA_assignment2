@@ -1,0 +1,8 @@
+{
+  "run_id": "P2b",
+  "events_processed": 30568,
+  "reports": 12,
+  "max_lag": 1691,
+  "late_included": 345,
+  "late_discarded": 103
+}

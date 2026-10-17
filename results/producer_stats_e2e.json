@@ -1,0 +1,17 @@
+{
+  "run_id": "e2e",
+  "requested_rate": 1000.0,
+  "actual_eps": 998.6,
+  "drain_s": 18.83,
+  "duplicates_sent": 398,
+  "delayed_events": 386,
+  "key_mode": "pickup_zone",
+  "partition_counts": {
+    "1": 5506,
+    "2": 5776,
+    "3": 4702,
+    "0": 4414
+  },
+  "partition_skew_max_fraction": 0.2832,
+  "elapsed_s": 39.0
+}

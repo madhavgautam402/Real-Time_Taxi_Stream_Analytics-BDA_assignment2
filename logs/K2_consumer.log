@@ -1,0 +1,13 @@
+[final] consuming taxi.metrics + taxi.lsh for run_id=K2
+[final] K2 n=225 eps=5.2 lag=2224 p50=0ms p95=0ms bloom_fp=0.0 samp_err=0.0% hll_err=-% dgim_err=5.4054% lsh_recall=-
+[final] K2 n=6515 eps=1070.8 lag=1586 p50=4837ms p95=5726ms bloom_fp=0.0 samp_err=0.0% hll_err=-% dgim_err=0.2817% lsh_recall=-
+[final] K2 n=10698 eps=606.7 lag=1115 p50=4802ms p95=5873ms bloom_fp=0.0 samp_err=0.0877% hll_err=-% dgim_err=0.6812% lsh_recall=-
+[final] K2 n=14644 eps=683.7 lag=1020 p50=4399ms p95=5720ms bloom_fp=0.0 samp_err=0.0481% hll_err=0.0% dgim_err=1.4514% lsh_recall=-
+[final] K2 n=17921 eps=572.9 lag=1110 p50=4157ms p95=5008ms bloom_fp=0.0 samp_err=0.3816% hll_err=0.0% dgim_err=4.2629% lsh_recall=0.6461
+[final] K2 n=21470 eps=692.4 lag=891 p50=3616ms p95=4884ms bloom_fp=0.0 samp_err=0.4924% hll_err=0.0% dgim_err=0.9766% lsh_recall=0.6461
+[final] K2 n=24420 eps=532.9 lag=1087 p50=3882ms p95=4687ms bloom_fp=0.0 samp_err=0.6395% hll_err=0.0695% dgim_err=1.9185% lsh_recall=0.7048
+[final] K2 n=28601 eps=627.8 lag=1008 p50=3643ms p95=4462ms bloom_fp=0.0 samp_err=0.4586% hll_err=0.0695% dgim_err=3.8781% lsh_recall=0.7048
+[final] K2 n=30451 eps=348.9 lag=30 p50=4109ms p95=4791ms bloom_fp=0.0 samp_err=0.2795% hll_err=0.0695% dgim_err=1.7595% lsh_recall=0.7048
+[final] K2 n=30519 eps=11.1 lag=13 p50=3934ms p95=4470ms bloom_fp=0.0 samp_err=0.3431% hll_err=0.0695% dgim_err=0.8721% lsh_recall=0.7048
+[final] K2 n=30560 eps=6.5 lag=6 p50=3711ms p95=4703ms bloom_fp=0.0 samp_err=0.3158% hll_err=0.0695% dgim_err=0.5882% lsh_recall=0.7048
+[final] K2 n=30568 eps=463.4 lag=0 p50=3971ms p95=4347ms bloom_fp=0.0 samp_err=0.3171% hll_err=2.0784% dgim_err=0.5865% lsh_recall=0.4286

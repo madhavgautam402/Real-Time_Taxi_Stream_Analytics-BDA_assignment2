@@ -1,0 +1,7 @@
+{
+  "run_id": "P2b",
+  "events_processed": 30568,
+  "windows": 4,
+  "late_included": 345,
+  "late_discarded": 103
+}

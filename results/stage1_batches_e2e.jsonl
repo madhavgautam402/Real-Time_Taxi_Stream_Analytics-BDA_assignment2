@@ -1,0 +1,14 @@
+{"batch_id": 1, "rows": 877, "accepted": 877, "batch_s": 2.385, "stage1_eps": 367.8, "ts_ms": 1792216984087}
+{"batch_id": 2, "rows": 3597, "accepted": 3597, "batch_s": 4.565, "stage1_eps": 787.9, "ts_ms": 1792216989801}
+{"batch_id": 3, "rows": 3549, "accepted": 3549, "batch_s": 1.78, "stage1_eps": 1993.4, "ts_ms": 1792216993566}
+{"batch_id": 4, "rows": 3034, "accepted": 3034, "batch_s": 1.055, "stage1_eps": 2874.9, "ts_ms": 1792216996520}
+{"batch_id": 5, "rows": 3544, "accepted": 3544, "batch_s": 1.889, "stage1_eps": 1876.0, "ts_ms": 1792217000559}
+{"batch_id": 6, "rows": 2517, "accepted": 2517, "batch_s": 1.431, "stage1_eps": 1759.0, "ts_ms": 1792217003672}
+{"batch_id": 7, "rows": 3066, "accepted": 3066, "batch_s": 1.558, "stage1_eps": 1968.5, "ts_ms": 1792217006949}
+{"batch_id": 8, "rows": 135, "accepted": 135, "batch_s": 0.815, "stage1_eps": 165.6, "ts_ms": 1792217009787}
+{"batch_id": 9, "rows": 23, "accepted": 23, "batch_s": 0.55, "stage1_eps": 41.8, "ts_ms": 1792217011607}
+{"batch_id": 10, "rows": 25, "accepted": 25, "batch_s": 0.805, "stage1_eps": 31.1, "ts_ms": 1792217013758}
+{"batch_id": 11, "rows": 18, "accepted": 18, "batch_s": 0.672, "stage1_eps": 26.8, "ts_ms": 1792217015666}
+{"batch_id": 12, "rows": 6, "accepted": 6, "batch_s": 0.716, "stage1_eps": 8.4, "ts_ms": 1792217017502}
+{"batch_id": 13, "rows": 3, "accepted": 3, "batch_s": 0.636, "stage1_eps": 4.7, "ts_ms": 1792217019330}
+{"batch_id": 14, "rows": 4, "accepted": 4, "batch_s": 0.646, "stage1_eps": 6.2, "ts_ms": 1792217021119}

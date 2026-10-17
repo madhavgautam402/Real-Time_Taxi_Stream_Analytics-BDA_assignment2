@@ -1,0 +1,17 @@
+{
+  "run_id": "K2",
+  "requested_rate": 600.0,
+  "actual_eps": 600.0,
+  "drain_s": 17.38,
+  "duplicates_sent": 568,
+  "delayed_events": 605,
+  "key_mode": "none",
+  "partition_counts": {
+    "0": 7937,
+    "1": 7503,
+    "2": 7492,
+    "3": 7636
+  },
+  "partition_skew_max_fraction": 0.2597,
+  "elapsed_s": 68.07
+}

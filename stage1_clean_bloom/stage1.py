@@ -1,7 +1,7 @@
 """Stage 1: taxi.raw -> validate + enrich + Bloom test -> taxi.clean (Spark Structured Streaming)."""
 import argparse, json, shutil, time
 from datetime import datetime
-from confluent_kafka import Producer
+from confluent_kafka import Consumer, Producer, TopicPartition
 from pyspark.sql import functions as F
 from common.bloom import make_bloom
 from common.config import load_config, ROOT
@@ -47,10 +47,12 @@ def main():
 
     bloom = make_bloom(cfg)
     exact_seen = set()                       # ground truth for Bloom evaluation
-    st = dict(rows_in=0, accepted=0, rejected=0, pos=0, neg=0, fp=0, fn=0, fp_logged=0, last_data=None)
-
+    st = dict(rows_in=0, accepted=0, rejected=0, pos=0, neg=0, fp=0, fn=0, fp_logged=0, last_data=None, max_lag=0)
     producer = Producer({"bootstrap.servers": cfg["bootstrap"], "linger.ms": 5, "compression.type": "lz4"})
-
+    lagc = Consumer({"bootstrap.servers": cfg["bootstrap"], "group.id": f"lagprobe1-{run_id}",
+                     "enable.auto.commit": False})
+    nparts = len(lagc.list_topics(raw_t, timeout=10).topics[raw_t].partitions)
+    max_off = {}
     def emit(key, value):
         while True:
             try:
@@ -65,6 +67,9 @@ def main():
         rows = batch_df.select("partition", "offset", F.col("value").cast("string").alias("v")).collect()
         if not rows:
             return
+        for r in rows:
+            if r["offset"] > max_off.get(r["partition"], -1):
+                max_off[r["partition"]] = r["offset"]        
         parsed = []
         for r in rows:
             try:
@@ -120,9 +125,14 @@ def main():
         st["accepted"] += acc
         st["last_data"] = time.time()
         dur_s = max(time.time() - t_start, 1e-6)
+        raw_lag = 0
+        for p in range(nparts):
+            lo, hi = lagc.get_watermark_offsets(TopicPartition(raw_t, p), timeout=5, cached=False)
+            raw_lag += max(0, hi - (max_off.get(p, lo - 1) + 1))
+        st["max_lag"] = max(st["max_lag"], raw_lag)
         line = {"batch_id": batch_id, "rows": len(rows), "accepted": acc,
                 "batch_s": round(dur_s, 3), "stage1_eps": round(acc / dur_s, 1),
-                "ts_ms": int(time.time() * 1000)}
+                "raw_lag": raw_lag, "ts_ms": int(time.time() * 1000)}
         with open(res / f"stage1_batches_{run_id}.jsonl", "a") as f:
             f.write(json.dumps(line) + "\n")
         print(f"[stage1] batch={batch_id} rows={len(rows)} {line['stage1_eps']}/s "

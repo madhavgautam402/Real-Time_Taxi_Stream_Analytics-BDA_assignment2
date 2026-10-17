@@ -1,0 +1,8 @@
+{
+  "run_id": "bloomfp",
+  "events_processed": 20398,
+  "reports": 12,
+  "max_lag": 958,
+  "late_included": 189,
+  "late_discarded": 8
+}

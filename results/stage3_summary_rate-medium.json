@@ -1,0 +1,7 @@
+{
+  "run_id": "rate-medium",
+  "events_processed": 30568,
+  "windows": 4,
+  "late_included": 280,
+  "late_discarded": 25
+}

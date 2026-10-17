@@ -1,0 +1,314 @@
+:: loading settings :: url = jar:file:/D:/Semester-5/Big_Data_Analytics/BDA_Assignment2/.venv/Lib/site-packages/pyspark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Ivy Default Cache set to: C:\Users\Madhav Gautam\.ivy2\cache
+The jars for the packages stored in: C:\Users\Madhav Gautam\.ivy2\jars
+org.apache.spark#spark-sql-kafka-0-10_2.12 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-48d81388-6613-407e-b3c7-c545cb72eecd;1.0
+	confs: [default]
+	found org.apache.spark#spark-sql-kafka-0-10_2.12;3.5.1 in central
+	found org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.5.1 in central
+	found org.apache.kafka#kafka-clients;3.4.1 in central
+	found org.lz4#lz4-java;1.8.0 in central
+	found org.xerial.snappy#snappy-java;1.1.10.3 in central
+	found org.slf4j#slf4j-api;2.0.7 in central
+	found org.apache.hadoop#hadoop-client-runtime;3.3.4 in central
+	found org.apache.hadoop#hadoop-client-api;3.3.4 in central
+	found commons-logging#commons-logging;1.1.3 in central
+	found com.google.code.findbugs#jsr305;3.0.0 in central
+	found org.apache.commons#commons-pool2;2.11.1 in central
+:: resolution report :: resolve 778ms :: artifacts dl 52ms
+	:: modules in use:
+	com.google.code.findbugs#jsr305;3.0.0 from central in [default]
+	commons-logging#commons-logging;1.1.3 from central in [default]
+	org.apache.commons#commons-pool2;2.11.1 from central in [default]
+	org.apache.hadoop#hadoop-client-api;3.3.4 from central in [default]
+	org.apache.hadoop#hadoop-client-runtime;3.3.4 from central in [default]
+	org.apache.kafka#kafka-clients;3.4.1 from central in [default]
+	org.apache.spark#spark-sql-kafka-0-10_2.12;3.5.1 from central in [default]
+	org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.5.1 from central in [default]
+	org.lz4#lz4-java;1.8.0 from central in [default]
+	org.slf4j#slf4j-api;2.0.7 from central in [default]
+	org.xerial.snappy#snappy-java;1.1.10.3 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   11  |   0   |   0   |   0   ||   11  |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-48d81388-6613-407e-b3c7-c545cb72eecd
+	confs: [default]
+	0 artifacts copied, 11 already retrieved (0kB/21ms)
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+26/10/17 23:26:41 WARN ResolveWriteToStream: spark.sql.adaptive.enabled is not supported in streaming DataFrames/Datasets and will be disabled.
+[stage2] running: taxi.clean -> taxi.metrics, slots=4, partitions=4
+26/10/17 23:26:42 WARN AdminClientConfig: These configurations '[key.deserializer, value.deserializer, enable.auto.commit, max.poll.records, auto.offset.reset]' were supplied but are not used yet.
+26/10/17 23:26:46 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 4749 milliseconds
+[Stage 0:>                                                          (0 + 4) / 4][Stage 0:=============================>                             (2 + 2) / 4][Stage 0:============================================>              (3 + 1) / 4]                                                                                [stage2] REPORT n=55 eps=1.4 lag=245 p50=0ms p95=0ms bloom fp=0 fn=0 dgim(k=5000) exact=9 est=8 late inc/disc=0/0
+26/10/17 23:27:00 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 5080 milliseconds
+[Stage 1:>                                                          (0 + 4) / 4]                                                                                26/10/17 23:27:02 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 2273 milliseconds
+26/10/17 23:27:04 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 2131 milliseconds
+[Stage 3:>                                                          (0 + 4) / 4]                                                                                [stage2] REPORT n=1625 eps=228.1 lag=316 p50=4402ms p95=5569ms bloom fp=0 fn=0 dgim(k=5000) exact=172 est=164 late inc/disc=0/0
+26/10/17 23:27:07 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 2671 milliseconds
+26/10/17 23:27:08 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1745 milliseconds
+26/10/17 23:27:10 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1889 milliseconds
+[stage2] REPORT n=2601 eps=161.5 lag=294 p50=4435ms p95=5688ms bloom fp=0 fn=0 dgim(k=5000) exact=317 est=301 late inc/disc=0/0
+26/10/17 23:27:12 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1841 milliseconds
+26/10/17 23:27:14 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 2011 milliseconds
+26/10/17 23:27:16 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1832 milliseconds
+[stage2] REPORT n=3469 eps=150.8 lag=264 p50=4106ms p95=4980ms bloom fp=0 fn=0 dgim(k=5000) exact=440 est=424 late inc/disc=0/0
+26/10/17 23:27:18 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1797 milliseconds
+26/10/17 23:27:19 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1639 milliseconds
+26/10/17 23:27:21 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1440 milliseconds
+26/10/17 23:27:23 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1711 milliseconds
+[stage2] REPORT n=4470 eps=154.4 lag=261 p50=3514ms p95=4370ms bloom fp=0 fn=0 dgim(k=5000) exact=576 est=544 late inc/disc=0/0
+26/10/17 23:27:24 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1622 milliseconds
+26/10/17 23:27:26 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1559 milliseconds
+26/10/17 23:27:27 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1415 milliseconds
+26/10/17 23:27:29 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1443 milliseconds
+[stage2] REPORT n=5408 eps=163.7 lag=220 p50=3211ms p95=4071ms bloom fp=0 fn=0 dgim(k=5000) exact=645 est=667 late inc/disc=0/0
+26/10/17 23:27:30 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1374 milliseconds
+26/10/17 23:27:31 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1242 milliseconds
+26/10/17 23:27:33 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1478 milliseconds
+26/10/17 23:27:34 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1222 milliseconds
+[stage2] REPORT n=6244 eps=159.4 lag=183 p50=2827ms p95=3462ms bloom fp=0 fn=0 dgim(k=5000) exact=694 est=675 late inc/disc=0/0
+26/10/17 23:27:35 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1257 milliseconds
+26/10/17 23:27:37 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1377 milliseconds
+26/10/17 23:27:38 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1265 milliseconds
+26/10/17 23:27:39 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1667 milliseconds
+[stage2] REPORT n=7013 eps=130.3 lag=253 p50=2988ms p95=3810ms bloom fp=0 fn=0 dgim(k=5000) exact=735 est=736 late inc/disc=0/0
+26/10/17 23:27:41 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1872 milliseconds
+26/10/17 23:27:43 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1651 milliseconds
+26/10/17 23:27:45 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1590 milliseconds
+[stage2] REPORT n=7799 eps=153.4 lag=233 p50=3628ms p95=4427ms bloom fp=0 fn=0 dgim(k=5000) exact=738 est=726 late inc/disc=0/0
+26/10/17 23:27:46 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1785 milliseconds
+26/10/17 23:27:48 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1448 milliseconds
+26/10/17 23:27:49 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1527 milliseconds
+26/10/17 23:27:51 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1513 milliseconds
+[stage2] REPORT n=8754 eps=155.4 lag=212 p50=3337ms p95=4098ms bloom fp=0 fn=0 dgim(k=5000) exact=716 est=722 late inc/disc=0/0
+26/10/17 23:27:53 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1745 milliseconds
+26/10/17 23:27:54 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1632 milliseconds
+26/10/17 23:27:56 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1480 milliseconds
+26/10/17 23:27:57 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1344 milliseconds
+[stage2] REPORT n=9704 eps=152.3 lag=200 p50=3313ms p95=4158ms bloom fp=0 fn=0 dgim(k=5000) exact=724 est=724 late inc/disc=13/0
+26/10/17 23:27:59 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1563 milliseconds
+26/10/17 23:28:00 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1335 milliseconds
+26/10/17 23:28:01 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1422 milliseconds
+26/10/17 23:28:03 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1491 milliseconds
+[stage2] REPORT n=10554 eps=146.9 lag=220 p50=3078ms p95=3731ms bloom fp=0 fn=0 dgim(k=5000) exact=731 est=711 late inc/disc=22/0
+26/10/17 23:28:05 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1667 milliseconds
+26/10/17 23:28:06 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1442 milliseconds
+26/10/17 23:28:08 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 2356 milliseconds
+[stage2] REPORT n=11442 eps=153.4 lag=0 p50=3394ms p95=4805ms bloom fp=0 fn=0 dgim(k=5000) exact=723 est=728 late inc/disc=31/0
+26/10/17 23:28:10 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1844 milliseconds
+26/10/17 23:28:12 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1711 milliseconds
+26/10/17 23:28:14 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1683 milliseconds
+26/10/17 23:28:15 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1612 milliseconds
+[stage2] REPORT n=12385 eps=146.1 lag=239 p50=3371ms p95=4116ms bloom fp=0 fn=0 dgim(k=5000) exact=710 est=731 late inc/disc=34/0
+26/10/17 23:28:17 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1519 milliseconds
+26/10/17 23:28:18 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1472 milliseconds
+26/10/17 23:28:20 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1604 milliseconds
+26/10/17 23:28:22 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1991 milliseconds
+[stage2] REPORT n=13305 eps=131.5 lag=323 p50=3497ms p95=4615ms bloom fp=0 fn=0 dgim(k=5000) exact=693 est=661 late inc/disc=34/0
+26/10/17 23:28:24 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1995 milliseconds
+26/10/17 23:28:26 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1775 milliseconds
+26/10/17 23:28:28 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 2245 milliseconds
+[stage2] REPORT n=14196 eps=155.9 lag=315 p50=4055ms p95=4949ms bloom fp=0 fn=0 dgim(k=5000) exact=687 est=704 late inc/disc=34/0
+26/10/17 23:28:29 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1659 milliseconds
+26/10/17 23:28:31 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1552 milliseconds
+[stage2] WINDOW 2026-01-01T00:00:00 n=9309 | HLL exact=3696 est=3695 err=0.0271% | diverse exact=0.4363 event=0.3197 entity=0.5
+26/10/17 23:28:33 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1960 milliseconds
+[stage2] REPORT n=15006 eps=155.8 lag=287 p50=3679ms p95=4509ms bloom fp=0 fn=0 dgim(k=5000) exact=677 est=678 late inc/disc=34/0
+26/10/17 23:28:35 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1704 milliseconds
+26/10/17 23:28:36 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1550 milliseconds
+26/10/17 23:28:38 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1794 milliseconds
+26/10/17 23:28:40 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1598 milliseconds
+[stage2] REPORT n=16054 eps=159.2 lag=233 p50=3531ms p95=4320ms bloom fp=0 fn=0 dgim(k=5000) exact=634 est=662 late inc/disc=34/0
+26/10/17 23:28:41 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1593 milliseconds
+26/10/17 23:28:43 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 2040 milliseconds
+26/10/17 23:28:45 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1673 milliseconds
+[stage2] REPORT n=16844 eps=145.5 lag=244 p50=3774ms p95=4668ms bloom fp=0 fn=0 dgim(k=5000) exact=599 est=626 late inc/disc=34/0
+26/10/17 23:28:47 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1898 milliseconds
+26/10/17 23:28:49 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1758 milliseconds
+26/10/17 23:28:50 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1391 milliseconds
+26/10/17 23:28:51 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1356 milliseconds
+[stage2] REPORT n=17844 eps=159.4 lag=193 p50=3359ms p95=4368ms bloom fp=0 fn=0 dgim(k=5000) exact=583 est=608 late inc/disc=34/0
+26/10/17 23:28:53 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1893 milliseconds
+26/10/17 23:28:55 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1684 milliseconds
+26/10/17 23:28:56 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1438 milliseconds
+[stage2] REPORT n=18586 eps=144.2 lag=208 p50=3569ms p95=4366ms bloom fp=0 fn=0 dgim(k=5000) exact=557 est=556 late inc/disc=34/0
+26/10/17 23:28:58 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 2104 milliseconds
+26/10/17 23:29:00 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1525 milliseconds
+26/10/17 23:29:01 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1414 milliseconds
+26/10/17 23:29:03 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1414 milliseconds
+[stage2] REPORT n=19553 eps=148.2 lag=184 p50=3353ms p95=4314ms bloom fp=0 fn=0 dgim(k=5000) exact=561 est=539 late inc/disc=35/0
+26/10/17 23:29:05 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1779 milliseconds
+26/10/17 23:29:06 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1360 milliseconds
+26/10/17 23:29:07 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1357 milliseconds
+26/10/17 23:29:09 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1949 milliseconds
+[stage2] REPORT n=20439 eps=141.6 lag=289 p50=3271ms p95=4044ms bloom fp=0 fn=0 dgim(k=5000) exact=533 est=562 late inc/disc=52/0
+26/10/17 23:29:11 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1600 milliseconds
+26/10/17 23:29:12 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1559 milliseconds
+26/10/17 23:29:14 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1614 milliseconds
+26/10/17 23:29:16 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1622 milliseconds
+[stage2] REPORT n=21454 eps=163.2 lag=246 p50=3389ms p95=4256ms bloom fp=0 fn=0 dgim(k=5000) exact=512 est=514 late inc/disc=62/0
+26/10/17 23:29:17 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1327 milliseconds
+26/10/17 23:29:18 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1264 milliseconds
+26/10/17 23:29:20 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1471 milliseconds
+26/10/17 23:29:21 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1448 milliseconds
+[stage2] REPORT n=22307 eps=154.9 lag=216 p50=2917ms p95=3587ms bloom fp=0 fn=0 dgim(k=5000) exact=479 est=472 late inc/disc=66/0
+26/10/17 23:29:23 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1348 milliseconds
+26/10/17 23:29:24 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1638 milliseconds
+26/10/17 23:29:25 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1303 milliseconds
+26/10/17 23:29:27 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1464 milliseconds
+[stage2] WINDOW 2026-01-01T01:00:00 n=10266 | HLL exact=4336 est=4345 err=0.2076% | diverse exact=0.4541 event=0.3372 entity=0.5106
+[stage2] REPORT n=23165 eps=143.0 lag=223 p50=3067ms p95=3717ms bloom fp=0 fn=0 dgim(k=5000) exact=437 est=427 late inc/disc=66/0
+26/10/17 23:29:29 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1748 milliseconds
+26/10/17 23:29:30 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1648 milliseconds
+26/10/17 23:29:32 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1851 milliseconds
+[stage2] REPORT n=23900 eps=135.7 lag=271 p50=3695ms p95=4533ms bloom fp=0 fn=0 dgim(k=5000) exact=420 est=423 late inc/disc=66/0
+26/10/17 23:29:34 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1924 milliseconds
+26/10/17 23:29:36 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1816 milliseconds
+26/10/17 23:29:37 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1474 milliseconds
+26/10/17 23:29:39 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1400 milliseconds
+[stage2] REPORT n=24954 eps=165.7 lag=210 p50=3480ms p95=4585ms bloom fp=0 fn=0 dgim(k=5000) exact=401 est=387 late inc/disc=66/0
+26/10/17 23:29:40 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1678 milliseconds
+26/10/17 23:29:42 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1426 milliseconds
+26/10/17 23:29:44 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1655 milliseconds
+26/10/17 23:29:46 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 2062 milliseconds
+[stage2] REPORT n=25878 eps=132.1 lag=306 p50=3496ms p95=4542ms bloom fp=0 fn=0 dgim(k=5000) exact=395 est=409 late inc/disc=66/0
+26/10/17 23:29:47 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1789 milliseconds
+26/10/17 23:29:49 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1520 milliseconds
+26/10/17 23:29:50 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1511 milliseconds
+26/10/17 23:29:52 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1533 milliseconds
+[stage2] REPORT n=26909 eps=161.5 lag=231 p50=3421ms p95=4365ms bloom fp=0 fn=0 dgim(k=5000) exact=383 est=380 late inc/disc=66/0
+26/10/17 23:29:54 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1771 milliseconds
+26/10/17 23:29:55 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1495 milliseconds
+26/10/17 23:29:57 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1676 milliseconds
+26/10/17 23:29:58 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1291 milliseconds
+[stage2] REPORT n=27884 eps=163.8 lag=188 p50=3271ms p95=4099ms bloom fp=0 fn=0 dgim(k=5000) exact=382 est=372 late inc/disc=82/0
+26/10/17 23:30:00 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1466 milliseconds
+26/10/17 23:30:01 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1362 milliseconds
+26/10/17 23:30:03 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1977 milliseconds
+26/10/17 23:30:04 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1314 milliseconds
+[stage2] REPORT n=28703 eps=126.4 lag=216 p50=3415ms p95=4242ms bloom fp=0 fn=0 dgim(k=5000) exact=363 est=357 late inc/disc=93/0
+26/10/17 23:30:06 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1762 milliseconds
+26/10/17 23:30:08 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1567 milliseconds
+26/10/17 23:30:09 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1184 milliseconds
+26/10/17 23:30:10 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1418 milliseconds
+[stage2] REPORT n=29673 eps=176.2 lag=207 p50=2814ms p95=4456ms bloom fp=0 fn=0 dgim(k=5000) exact=364 est=376 late inc/disc=103/0
+26/10/17 23:30:12 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1282 milliseconds
+26/10/17 23:30:13 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1233 milliseconds
+26/10/17 23:30:14 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1438 milliseconds
+26/10/17 23:30:16 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1417 milliseconds
+[stage2] REPORT n=30472 eps=139.6 lag=0 p50=2956ms p95=3734ms bloom fp=0 fn=0 dgim(k=5000) exact=349 est=337 late inc/disc=106/0
+26/10/17 23:30:17 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1636 milliseconds
+26/10/17 23:30:19 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1562 milliseconds
+26/10/17 23:30:20 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1514 milliseconds
+[Stage 125:==============>                                          (1 + 3) / 4]                                                                                26/10/17 23:30:22 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1509 milliseconds
+[stage2] REPORT n=30554 eps=13.2 lag=0 p50=3872ms p95=4107ms bloom fp=0 fn=0 dgim(k=5000) exact=344 est=342 late inc/disc=106/0
+26/10/17 23:30:23 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1577 milliseconds
+[Stage 127:===================>                                     (1 + 2) / 3]                                                                                26/10/17 23:30:25 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1599 milliseconds
+26/10/17 23:30:26 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1379 milliseconds
+26/10/17 23:30:28 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1577 milliseconds
+[stage2] REPORT n=30563 eps=1.5 lag=0 p50=3554ms p95=4017ms bloom fp=0 fn=0 dgim(k=5000) exact=343 est=343 late inc/disc=106/0
+26/10/17 23:30:29 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1505 milliseconds
+[Stage 131:>                                                        (0 + 2) / 2]                                                                                26/10/17 23:30:31 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1723 milliseconds
+[Stage 132:>                                                        (0 + 1) / 1]                                                                                26/10/17 23:30:33 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1659 milliseconds
+26/10/17 23:30:34 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 1000 milliseconds, but spent 1416 milliseconds
+[stage2] idle timeout reached, stopping
+[stage2] WINDOW 2026-01-01T02:00:00 n=7807 | HLL exact=3771 est=3848 err=2.0419% | diverse exact=0.4476 event=0.3446 entity=0.5333
+[stage2] WINDOW 2026-01-01T03:00:00 n=3186 | HLL exact=2117 est=2161 err=2.0784% | diverse exact=0.4034 event=0.2017 entity=0.4865
+[stage2] REPORT n=30568 eps=139.8 lag=0 p50=3116ms p95=3354ms bloom fp=0 fn=0 dgim(k=5000) exact=341 est=343 late inc/disc=106/0
+26/10/17 23:31:04 WARN SparkEnv: Exception while deleting Spark temp dir: D:\SparkTemp\spark-f3e898b4-5220-4479-8399-fbade074d436\userFiles-bb5858d6-4676-4dcc-93e6-a7802dd42d93
+java.io.IOException: Failed to delete: D:\SparkTemp\spark-f3e898b4-5220-4479-8399-fbade074d436\userFiles-bb5858d6-4676-4dcc-93e6-a7802dd42d93\org.xerial.snappy_snappy-java-1.1.10.3.jar
+	at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingJavaIO(JavaUtils.java:146)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:117)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingJavaIO(JavaUtils.java:129)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:117)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:90)
+	at org.apache.spark.util.SparkFileUtils.deleteRecursively(SparkFileUtils.scala:121)
+	at org.apache.spark.util.SparkFileUtils.deleteRecursively$(SparkFileUtils.scala:120)
+	at org.apache.spark.util.Utils$.deleteRecursively(Utils.scala:1126)
+	at org.apache.spark.SparkEnv.stop(SparkEnv.scala:108)
+	at org.apache.spark.SparkContext.$anonfun$stop$25(SparkContext.scala:2310)
+	at org.apache.spark.util.Utils$.tryLogNonFatalError(Utils.scala:1375)
+	at org.apache.spark.SparkContext.stop(SparkContext.scala:2310)
+	at org.apache.spark.SparkContext.stop(SparkContext.scala:2216)
+	at org.apache.spark.api.java.JavaSparkContext.stop(JavaSparkContext.scala:550)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+26/10/17 23:31:05 ERROR ShutdownHookManager: Exception while deleting Spark temp dir: D:\SparkTemp\spark-f3e898b4-5220-4479-8399-fbade074d436\userFiles-bb5858d6-4676-4dcc-93e6-a7802dd42d93
+java.io.IOException: Failed to delete: D:\SparkTemp\spark-f3e898b4-5220-4479-8399-fbade074d436\userFiles-bb5858d6-4676-4dcc-93e6-a7802dd42d93\org.xerial.snappy_snappy-java-1.1.10.3.jar
+	at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingJavaIO(JavaUtils.java:146)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:117)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingJavaIO(JavaUtils.java:129)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:117)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:90)
+	at org.apache.spark.util.SparkFileUtils.deleteRecursively(SparkFileUtils.scala:121)
+	at org.apache.spark.util.SparkFileUtils.deleteRecursively$(SparkFileUtils.scala:120)
+	at org.apache.spark.util.Utils$.deleteRecursively(Utils.scala:1126)
+	at org.apache.spark.util.ShutdownHookManager$.$anonfun$new$4(ShutdownHookManager.scala:65)
+	at org.apache.spark.util.ShutdownHookManager$.$anonfun$new$4$adapted(ShutdownHookManager.scala:62)
+	at scala.collection.IndexedSeqOptimized.foreach(IndexedSeqOptimized.scala:36)
+	at scala.collection.IndexedSeqOptimized.foreach$(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:198)
+	at org.apache.spark.util.ShutdownHookManager$.$anonfun$new$2(ShutdownHookManager.scala:62)
+	at org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:214)
+	at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$2(ShutdownHookManager.scala:188)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1928)
+	at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$1(ShutdownHookManager.scala:188)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.util.Try$.apply(Try.scala:213)
+	at org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:178)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+26/10/17 23:31:05 ERROR ShutdownHookManager: Exception while deleting Spark temp dir: D:\SparkTemp\spark-f3e898b4-5220-4479-8399-fbade074d436
+java.io.IOException: Failed to delete: D:\SparkTemp\spark-f3e898b4-5220-4479-8399-fbade074d436\userFiles-bb5858d6-4676-4dcc-93e6-a7802dd42d93\org.xerial.snappy_snappy-java-1.1.10.3.jar
+	at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingJavaIO(JavaUtils.java:146)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:117)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingJavaIO(JavaUtils.java:129)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:117)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingJavaIO(JavaUtils.java:129)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:117)
+	at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:90)
+	at org.apache.spark.util.SparkFileUtils.deleteRecursively(SparkFileUtils.scala:121)
+	at org.apache.spark.util.SparkFileUtils.deleteRecursively$(SparkFileUtils.scala:120)
+	at org.apache.spark.util.Utils$.deleteRecursively(Utils.scala:1126)
+	at org.apache.spark.util.ShutdownHookManager$.$anonfun$new$4(ShutdownHookManager.scala:65)
+	at org.apache.spark.util.ShutdownHookManager$.$anonfun$new$4$adapted(ShutdownHookManager.scala:62)
+	at scala.collection.IndexedSeqOptimized.foreach(IndexedSeqOptimized.scala:36)
+	at scala.collection.IndexedSeqOptimized.foreach$(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:198)
+	at org.apache.spark.util.ShutdownHookManager$.$anonfun$new$2(ShutdownHookManager.scala:62)
+	at org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:214)
+	at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$2(ShutdownHookManager.scala:188)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1928)
+	at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$1(ShutdownHookManager.scala:188)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.util.Try$.apply(Try.scala:213)
+	at org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:178)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+SUCCESS: The process with PID 23880 (child process of PID 31916) has been terminated.
+SUCCESS: The process with PID 31916 (child process of PID 13812) has been terminated.
+SUCCESS: The process with PID 13812 (child process of PID 13040) has been terminated.

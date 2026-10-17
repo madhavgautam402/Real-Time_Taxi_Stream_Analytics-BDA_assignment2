@@ -78,10 +78,11 @@ def main():
     nparts = len(lagc.list_topics(clean_t, timeout=10).topics[clean_t].partitions)
 
     # ---------------- state ----------------
-    st = SimpleNamespace(n=0, sum_fare=0.0, sum_dist=0.0, pos=0, neg=0, fp=0, fn=0,
+    st = SimpleNamespace(n=0, first_ts=None, warm_until=None, busy_total=0.0, sum_fare=0.0, sum_dist=0.0, pos=0, neg=0, fp=0, fn=0,
                          late_inc=0, late_disc=0, late_logged=0, max_ev=0, last_data=None,
                          max_lag=0, max_off={}, part_counts=defaultdict(int), reports=0)
     iv = SimpleNamespace(n=0, busy=0.0, lat=[], t0=time.time())
+    lat_all = []    
     reservoirs = [Reservoir(k, seed=k) for k in cfg["reservoir_sizes"]]
     dgim = DGIM(cfg["dgim_max_window"], cfg.get("dgim_r", 2))
     bits = deque(maxlen=cfg["dgim_max_window"])
@@ -116,7 +117,8 @@ def main():
         wall = max(now - iv.t0, 1e-6)
         lat = np.array(iv.lat) if iv.lat else np.array([0])
         lag = clean_lag()
-        st.max_lag = max(st.max_lag, lag)
+        if st.reports >= 2:                      # ignore the Spark warm-up reports
+            st.max_lag = max(st.max_lag, lag)
         total_p = sum(st.part_counts.values()) or 1
 
         samp = {}
@@ -144,6 +146,8 @@ def main():
             "stage2_capacity_eps": round(iv.n / iv.busy, 1) if iv.busy > 0 else 0,
             "consumer_lag": lag, "max_lag_so_far": st.max_lag,
             "latency_p50_ms": int(np.percentile(lat, 50)), "latency_p95_ms": int(np.percentile(lat, 95)),
+            "latency_overall_p50_ms": int(np.percentile(lat_all, 50)) if lat_all else 0,
+            "latency_overall_p95_ms": int(np.percentile(lat_all, 95)) if lat_all else 0,            
             "partition_counts": dict(st.part_counts),
             "partition_skew": round(max(st.part_counts.values()) / total_p, 4) if st.part_counts else 0,
             "bloom": {"fp_rate": round(st.fp / st.neg, 6) if st.neg else 0.0,
@@ -153,6 +157,9 @@ def main():
             "sampling": samp, "dgim": dg,
             "late": {"included": st.late_inc, "discarded": st.late_disc},
         }
+        if final and st.first_ts and st.last_data:      # whole-run averages for the final record
+            rep["stage2_eps"] = round(st.n / max(st.last_data - st.first_ts, 1e-6), 1)
+            rep["stage2_capacity_eps"] = round(st.n / st.busy_total, 1) if st.busy_total else 0
         send(rep)
         producer.poll(0)
         st.reports += 1
@@ -220,7 +227,8 @@ def main():
                 st.max_off[r["partition"]] = r["offset"]
         parsed.sort(key=lambda x: x[:3])
         now_ms = int(time.time() * 1000)
-
+        if st.first_ts is None:
+            st.first_ts = t_start
         for pts, _, _, ev in parsed:
             st.n += 1
             iv.n += 1
@@ -232,8 +240,9 @@ def main():
             b = ev["slow_trip_bit"]
             dgim.add(b)
             bits.append(b)
-            iv.lat.append(now_ms - pts)
-
+            if st.warm_until is not None and pts >= st.warm_until:   # skip Spark warm-up period
+                iv.lat.append(now_ms - pts)
+                lat_all.append(now_ms - pts)
             truth, pred = ev["seen_before_truth"], ev["bloom_seen_before"]
             if truth:
                 st.pos += 1
@@ -265,7 +274,10 @@ def main():
 
         busy = time.time() - t_start
         iv.busy += busy
+        st.busy_total += busy
         st.last_data = time.time()
+        if st.warm_until is None:
+            st.warm_until = int(time.time() * 1000)
         if time.time() - iv.t0 >= interval:
             build_report()
         producer.poll(0)

@@ -1,0 +1,8 @@
+{
+  "run_id": "P3b",
+  "events_processed": 30568,
+  "reports": 12,
+  "max_lag": 1252,
+  "late_included": 346,
+  "late_discarded": 103
+}

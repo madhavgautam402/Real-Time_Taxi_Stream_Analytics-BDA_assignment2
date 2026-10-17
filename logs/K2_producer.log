@@ -1,0 +1,28 @@
+[producer] 30000 events, rate=600.0/s, key_mode=none, run_id=K2
+[producer] sent=2999 actual=600/s
+[producer] sent=6002 actual=600/s
+[producer] sent=8998 actual=598/s
+[producer] sent=12023 actual=600/s
+[producer] sent=15022 actual=600/s
+[producer] sent=18026 actual=600/s
+[producer] sent=21027 actual=600/s
+[producer] sent=24028 actual=600/s
+[producer] sent=27027 actual=600/s
+[producer] sent=30030 actual=600/s
+[producer] DONE {
+  "run_id": "K2",
+  "requested_rate": 600.0,
+  "actual_eps": 600.0,
+  "drain_s": 17.38,
+  "duplicates_sent": 568,
+  "delayed_events": 605,
+  "key_mode": "none",
+  "partition_counts": {
+    "0": 7937,
+    "1": 7503,
+    "2": 7492,
+    "3": 7636
+  },
+  "partition_skew_max_fraction": 0.2597,
+  "elapsed_s": 68.07
+}
