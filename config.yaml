@@ -1,0 +1,28 @@
+run_id: default
+bootstrap: "localhost:9092"
+parquet_path: data/yellow_tripdata_2026-01.parquet
+max_events: 200000          # size of the taxi segment to replay
+key_mode: pickup_zone       # pickup_zone | none  (none = round-robin experiment K2)
+
+topics:
+  raw: taxi.raw
+  clean: taxi.clean
+  metrics: taxi.metrics
+  lsh: taxi.lsh
+
+partitions: 4
+producer_rate: 1000
+duplicate_rate: 0.02
+delayed_event_rate: 0.02
+max_delay_seconds: 20
+window_minutes: 60
+hll_precision: 12
+dgim_max_window: 10000
+bloom_expected_items: 200000
+bloom_false_positive_target: 0.01
+lsh_num_hashes: 100
+lsh_bands: 20
+lsh_rows_per_band: 5
+jaccard_threshold: 0.50
+stage1_max_offsets_per_trigger: 20000   # max events Spark pulls per micro-batch
+bloom_bits: null                        # set e.g. 200000 later to force Bloom false positives

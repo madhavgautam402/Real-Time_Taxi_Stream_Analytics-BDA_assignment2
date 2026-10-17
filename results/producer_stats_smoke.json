@@ -1,0 +1,17 @@
+{
+  "run_id": "smoke",
+  "requested_rate": 500.0,
+  "actual_eps": 500.1,
+  "drain_s": 17.52,
+  "duplicates_sent": 91,
+  "delayed_events": 91,
+  "key_mode": "pickup_zone",
+  "partition_counts": {
+    "1": 1361,
+    "2": 1487,
+    "3": 1216,
+    "0": 1027
+  },
+  "partition_skew_max_fraction": 0.2921,
+  "elapsed_s": 27.51
+}
