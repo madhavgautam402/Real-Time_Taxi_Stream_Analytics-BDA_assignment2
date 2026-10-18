@@ -91,12 +91,12 @@ roughly 1/sqrt(k). Mean trip distance behaves the same (`sampling_all` in the re
 "fraction of pickup zones with >= 10 distinct drop-off zones per 60-min window" (equal storage budget for both methods),
 event sampling underestimates in every window, for example exact 0.436 vs 0.338 and exact 0.176 vs 0.0, because a zone's
 sampled events miss most of its destinations. Entity sampling (deterministic hash of the pickup zone, all events of selected zones kept)
-gave 0.500 and 0.154 for those two windows: no systematic bias, but noisy because only about 25-40 zones are selected.
+gave 0.500 and 0.154 for those two windows: no systematic bias, but noisy because only 26-42 zones are selected.
 Entity sampling is the more reliable design for this statistic because the property depends on a zone's complete behaviour.
 
 **HyperLogLog.** Precision 12 (4,096 registers, about 3 KB) vs an exact set of about 300 KB for a 60-minute window.
-Per-window error 0.1-1.1% (mean 1.05% in the 30k-event runs). The error does not change with producer rate or partitions;
-it only changes if late-event handling changes which events a window contains.
+Window errors were 0.08-0.21% in the 20k-event test and averaged 1.05-1.14% over windows in the 30k-event runs.
+The error does not depend on partitions; it only moves with rate if late-event handling changes which events a window contains.
 
 **DGIM.** Window 10,000, queries k = 1,000 / 5,000 / 10,000, bucket counts reported. With the textbook 2 buckets per size
 the error was 9-34% (inside the 50% bound, worst when 1s are sparse); with `dgim_r=8` (65 buckets in a synthetic test) it fell
