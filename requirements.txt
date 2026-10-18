@@ -6,3 +6,4 @@ numpy
 pyspark==3.5.1
 datasketch
 mmh3
+matplotlib
